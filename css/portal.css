@@ -1,0 +1,169 @@
+/* My IT162 Portal Website Styles */
+
+body {
+	margin: 0;
+}
+
+html {
+	background-color: whitesmoke;
+}
+
+form {
+	padding: 15px;
+}
+
+#header {
+	padding: 20px;
+	margin: 0;
+	background-color: black;
+}
+
+#header a {
+	font-size: 25px;
+	color: whitesmoke;
+	font-weight: 900;
+
+}
+
+main.wrapper {
+	font-family: "Lato", sans-serif;
+	background-color: whitesmoke;
+	overflow: auto;
+}
+
+h1 > a {
+	text-decoration: none;
+	color: #000;
+}
+
+section {
+	padding-left: 15px;
+}
+
+section > p {
+	
+}
+
+section > h3 {
+	
+}
+
+section > img {
+	width: 100%;
+}
+
+aside {
+	width: 35%;
+	float: right;
+	padding: 5px;
+	margin: 20px;
+	background-color: #0b3494;
+	color: white;
+}
+
+aside > p {
+	padding-left: 15px;
+}
+
+aside > h3 {
+	padding-left: 15px;
+}
+
+img.desktop {
+	width: 100%;
+	}
+
+.logo {
+	color: darkred;
+	margin: 1%;
+	font-size: 1.25em;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	margin: auto;
+	max-width: 98%;
+}
+
+div.embed-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	background-color: black;
+	padding: 15px;
+	color: whitesmoke;
+	clear: both;
+	text-align: center;
+	font-size: 12px;
+}
+
+footer a {
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: deepskyblue;
+	transition: 0.2s;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+
+	main.wrapper {
+		width: 100%;
+		margin: auto;
+	}
+
+	section {
+		width: 50%;
+		float: left;
+	}
+
+	/* Change background color of navigation on selected page */
+	ul.topnav li a.selected {
+		background-color: #ccc;
+		color: #000;
+	}
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+
+	section {
+		width: 50%;
+		float: left;
+	}
+
+
+
+
+	/* Change background color of navigation on selected page */
+	ul.topnav li a.selected {
+		background-color: #ccc;
+		color: #000;
+	}
+}
+
+/* PHONE */
+@media all and (max-width:736px) {
+
+	body {
+		margin: auto;
+	}
+	
+
+
+}

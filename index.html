@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title><?=$title?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex,nofollow" />
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/6a71565c22.js"></script>
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/aia.css" />
+	<link rel="stylesheet" href="css/portal.css" />
+	<link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+	<!-- START WRAPPER -->
+	<main class="wrapper">
+		<header>
+			<h1 id="header"><a href="index.php"><i class="logo fa <?=$logo?>"></i>Julio Ramos | IT261 Portal</a></h1>
+			<nav>
+				<ul class="topnav" id="myTopnav">
+					<?=makeLinks($nav1)?>
+
+					<li><a href="index.php" class="selected">Home</a></li>
+					<li><a href="">Switch (3)</a></li>
+					<li><a href="">Troubleshoot (4)</a></li>
+					<li><a href="">Calculator (5)</a></li>
+					<li><a href="">Email (6)</a></li>
+					<li><a href="">Gallery (7)</a></li>
+					<li><a href="">Databases (8)</a></li>
+					<li class="icon"> <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a> </li>
+
+				</ul>
+			</nav>
+		</header>
+
+		<!-- START LEFT COL -->
+		<section>
+
+			<h2 class="PageID"><?=$PageID?></h2>
+
+			<p>Hi, my name is Julio and I'm an aspiring web designer/developer and have been working towards a degree for a year. Initially I was looking towards the graphic design world but decided to shift gears.</p>
+			<p>Initially from New Hampshire, I moved to Portland when I was 18, which opened my eyes to the amazing design produced in the PNW.</p>
+			<p>My focus has been towards design and the user. I believe a website must not only function properly, but exceed a users expectations in terms of usability and design. My goal is to create these websites with a company that I can grow with.</p>
+		</section>
+		<!-- END LEFT COL -->
+
+		<!-- START RIGHT COL -->
+		<aside>
+
+			<img src="images/desktop.jpg" class="desktop" alt="Desktop" />
+			<h3>Weekly Exercises:</h3>
+
+			<p>Lorem Ipsum place holder text goes here for now</p>
+			<p>Lorem Ipsum place holder text goes here for now</p>
+		</aside>
+		<!-- END RIGHT COL -->
+
+		<!-- START Footer -->
+		<footer>
+			<p id="footerleft">&copy; 2020 - <?=date('Y')?> by Julio Ramos, All Rights Reserved.
+				<br>
+				<a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> | <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
+			</p>
+		</footer>
+		<!-- END Footer -->
+	</main>
+	<!-- END WRAPPER -->
+
+	<!-- JavaScript associated with the W3Schools.com Top Navigation Response Exercise -->
+	<script>
+		/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+</body></html>
