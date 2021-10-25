@@ -24,8 +24,8 @@ if(isset($_POST['name'],
 	<label>NAME</label>
 	<input type="text" name="name">
 	
-	<label>EMAILI</label>
-	<input type="emial" email="email">
+	<label>EMAIL</label>
+	<input type="email" email="email">
 	
 	<input type="submit" value="Send it!">
 	</form>
