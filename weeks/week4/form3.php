@@ -3,7 +3,34 @@
 <head>
 <title>Form 3 with HTML and CSS</title>
 <meta charset="UTF-8">
+<style>
 
+    form {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    fieldset {
+        border: 1px solid red;
+        padding: 10px;
+    }
+
+    label, textarea {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        margin-bottom: 10px;
+    }
+
+    input[type=text],
+    input[type-email],
+    textarea {
+        width: 100%;
+    }
+
+</style>
 </head>
 
 <body>
@@ -37,7 +64,7 @@ $comments = $_POST['comments'];
 // nest an if/else statment
 
 if(empty($fname && $lname && $email && $comments)) {
-    $error = 'Please fill out the input fields';
+    echo '<h3>Please fill out the input fields</h3>';
 } else {
     echo $fname;
     echo $lname;
