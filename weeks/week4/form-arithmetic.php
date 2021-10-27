@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Form 3 with HTML and CSS</title>
+<title>Arithmetic Form</title>
 <meta charset="UTF-8">
 <style>
 
@@ -51,11 +51,12 @@
 
             <label for="fname">First Name</label>
             <input type="text" name="fname">
-            <label for="lname">Last Name</label>
-            <input type="text" name="lname">
-            <label for="email">Email</label>
-            <input type="email" name="email">
-            <textarea name="comments"></textarea>
+            <label for="coffees">How many coffees?</label>
+            <input type="number" name="coffees">
+            <label for="lattes">Lattes</label>
+            <input type="numbers" name="lattes">
+            <label for="caps">Cappucino</label>
+            <input type="number" name="caps">
             <input type="submit" value="Send it!">
 
         </fieldset>
@@ -64,18 +65,22 @@
     <?php
 // form 3 - adding HTML and CSS
 if(isset($_POST['fname'],
-         $_POST['lname'],
-         $_POST['email'],
-         $_POST['comments'])) {
+         $_POST['coffees'],
+         $_POST['lattes'],
+         $_POST['caps'])) {
 
 $fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$email = $_POST['email'];
-$comments = $_POST['comments'];
+$coffees = $_POST['coffees'];
+$lattes = $_POST['lattes'];
+$caps = $_POST['caps'];
+
+$total = $coffees + $lattes + $caps;
+
+$friendly_total = number_format($total, 0);
 
 // nest an if/else statment
 
-if(empty($fname && $lname && $email && $comments)) {
+if(empty($fname && $coffees && $lattes && $caps)) {
     echo '<h3>Please fill out the input fields</h3>';
 } else {
 //    echo $fname;
@@ -86,12 +91,17 @@ if(empty($fname && $lname && $email && $comments)) {
 echo '
 
 <div class="box">
-    <ul>
-        <li><b>First Name :</b> '.$fname.'</li>
-        <li><b>Last Name :</b> '.$lname.'</li>
-        <li><b>Email :</b> '.$email.'</li>
-        <li><b>Comments :</b> '.$comments.'</li>
-    <ul>
+<h2>Hello '.$fname.'</h2>
+<p>You have ordered the following:</p>
+<ul>
+
+    <li>'.coffees.' Coffees</li>
+    <li>'.lattes.' Lattes</li>
+    <li>'.caps.' Cappacinos</li>
+
+</ul>
+<p>Totalling '.$friendly_total.' beverages</p>
+
 </div>
 
 ';
