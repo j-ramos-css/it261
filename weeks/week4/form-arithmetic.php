@@ -71,16 +71,19 @@ if(isset($_POST['fname'],
 
 $fname = $_POST['fname'];
 $coffees = $_POST['coffees'];
+$int_coffees = intval($coffees);
 $lattes = $_POST['lattes'];
+$int_lattes = intval($lattes);
 $caps = $_POST['caps'];
+$int_caps = intval($caps);
 
-$total = $coffees + $lattes + $caps;
+$total = $int_coffees + $int_lattes + $int_caps;
 
 $friendly_total = number_format($total, 0);
 
 // nest an if/else statment
 
-if(empty($fname && $coffees && $lattes && $caps)) {
+if(empty($fname && $int_coffees && $int_lattes && $int_caps)) {
     echo '<h3>Please fill out the input fields</h3>';
 } else {
 //    echo $fname;
@@ -95,9 +98,9 @@ echo '
 <p>You have ordered the following:</p>
 <ul>
 
-    <li>'.coffees.' Coffees</li>
-    <li>'.lattes.' Lattes</li>
-    <li>'.caps.' Cappacinos</li>
+    <li>'.$int_coffees.' Coffees</li>
+    <li>'.$int_lattes.' Lattes</li>
+    <li>'.$int_caps.' Cappacinos</li>
 
 </ul>
 <p>Totalling '.$friendly_total.' beverages</p>
