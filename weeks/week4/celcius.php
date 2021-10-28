@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  {
     if(isset($_POST['cel'])) {
 
         $cel = $_POST['cel'];
-        $cel_int = inval($cel);
+        $cel_int = intval($cel);
         $far = ($cel_int * 9/5) + 32;
 
         if($cel == NULL) {
