@@ -68,6 +68,33 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $comments = $_POST['comments'];
     }
 
+    if(isset(
+    $_POST['first_name'],
+    $_POST['last_name'],
+    $_POST['email'],
+    $_POST['gender'],
+    $_POST['wines'],
+    $_POST['regions'],
+    $_POST['comments'],
+    $_POST['privacy'],
+    )) {
+
+        $to = 'juliorayramos@gmail.com';
+        $subject = 'Test Email' .date('m/d/y');
+        $body = '
+        The first name is: '.$first_name.' '.PHP_EOL.'
+        The last name is: '.$last_name.' '.PHP_EOL.'
+        Gender:'.$gender.' '.PHP_EOL.'
+        
+        Region: '.$regions.' '.PHP_EOL.'
+        Comments: '.$comments.' '.PHP_EOL.'
+        ';
+
+        mail($to, $subject, $body);
+        header('Location: thx.php');
+
+    }
+
 }
 
 ?>
@@ -209,7 +236,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <label for="comments">
         <textarea name="comments">
-            <? if(isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']) ;?>
+            <?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']) ;?>
         </textarea>
 
     <span class="error">
@@ -218,7 +245,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <label for="privacy">Privacy</label>
     <ul>
-        <li><input type="radio" name="">I agree</li>
+        <li><input type="radio" name="privacy" value="agree"
+        <? if(isset($_POST['privacy']) && $_POST['privacy'] == 'agree') echo 'checked="checked" ' ;?>
+        >I agree</li>
     </ul>
     <span class="error">
         <?php echo $privacy_Err;   ?>
