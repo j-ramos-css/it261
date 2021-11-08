@@ -1,0 +1,32 @@
+/* styles for week 6 wine form */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgoldenrodyellow;
+}
+
+label {
+    display: block;
+}
+
+form {
+    width: 400px;
+    margin: 20px auto;
+}
+
+.error {
+    display: block;
+    color: red;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+fieldset {
+    padding: 10px;
+}
