@@ -68,6 +68,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $comments = $_POST['comments'];
     }
 
+    function my_wines() {
+        $my_return = '';
+        if(!empty($_POST['wines'])) {
+            $my_return = implode(', ', $_POST['wines'] );
+        }
+        return $my_return;
+    }
+
     if(isset(
     $_POST['first_name'],
     $_POST['last_name'],
@@ -84,8 +92,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $body = '
         The first name is: '.$first_name.' '.PHP_EOL.'
         The last name is: '.$last_name.' '.PHP_EOL.'
-        Gender:'.$gender.' '.PHP_EOL.'
-        
+        Gender: '.$gender.' '.PHP_EOL.'
+        Wines: '.my_wines().' '.PHP_EOL.'
         Region: '.$regions.' '.PHP_EOL.'
         Comments: '.$comments.' '.PHP_EOL.'
         ';
