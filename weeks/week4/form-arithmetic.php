@@ -32,7 +32,7 @@
 
     h3 {
         color: red;
-        text-align: center:
+        text-align: center;
     }
 
     .box {
