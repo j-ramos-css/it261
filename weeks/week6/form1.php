@@ -124,7 +124,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             'Reply-to' => ''.$email.''
         );
 
-        mail($to, $subject, $body);
+        mail($to, $subject, $body, $headers);
         header('Location: thx.php');
 
     }
@@ -174,7 +174,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     </span>
 
     <label for="phone">Phone</label>
-    <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="
+    <input type="text" name="phone" placeholder="xxx-xxx-xxxx" value="
         <?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']) ;?>
     ">
 
