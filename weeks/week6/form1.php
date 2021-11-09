@@ -8,6 +8,8 @@ $wines = '';
 $comments = '';
 $regions = '';
 $privacy = '';
+$phone = '';
+
 
 $first_name_Err = '';
 $last_name_Err = '';
@@ -17,6 +19,8 @@ $wines_Err = '';
 $comments_Err = '';
 $regions_Err = '';
 $privacy_Err = '';
+$phone_Err = '';
+
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -68,6 +72,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $comments = $_POST['comments'];
     }
 
+    if(empty($_POST['phone'])) {  // if empty, type in your number
+        $phone_Err = 'Your phone number please!';
+        } elseif(array_key_exists('phone', $_POST)) {
+            if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone']))
+            { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+                $phone_Err = 'Invalid format!';
+            } else{
+                $phone = $_POST['phone'];
+            }
+        }
+        
+        
+
     function my_wines() {
         $my_return = '';
         if(!empty($_POST['wines'])) {
@@ -85,6 +102,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['regions'],
     $_POST['comments'],
     $_POST['privacy'],
+    $_POST['phone']
+
     )) {
 
         $to = 'juliorayramos@gmail.com';
@@ -93,10 +112,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         The first name is: '.$first_name.' '.PHP_EOL.'
         The last name is: '.$last_name.' '.PHP_EOL.'
         Gender: '.$gender.' '.PHP_EOL.'
+        Email: '.$email.' '.PHP_EOL.'
+        Phone: '.$phone.' '.PHP_EOL.'
         Wines: '.my_wines().' '.PHP_EOL.'
         Region: '.$regions.' '.PHP_EOL.'
         Comments: '.$comments.' '.PHP_EOL.'
         ';
+
+        $headers = array(
+            'From' => 'noreply@juliorayramos@gmail.com',
+            'Reply-to' => ''.$email.''
+        );
 
         mail($to, $subject, $body);
         header('Location: thx.php');
@@ -145,6 +171,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <span class="error">
         <?php echo $email_Err;   ?>
+    </span>
+
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="
+        <?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']) ;?>
+    ">
+
+    <span class="error">
+        <?php echo $phone_Err;   ?>
     </span>
 
     <label for="gender">Gender</label>
