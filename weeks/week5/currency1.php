@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Basic Currency Form</title>
-<link href="css/styles.css" type="text/css" rel="stylesheet">
+<link href="styles/styles.css" type="text/css" rel="stylesheet">
 
 </head>
 
