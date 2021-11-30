@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Julio Ramos | IIT261 Portal Page</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="noindex,nofollow" />
-	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-	<script src="https://use.fontawesome.com/6a71565c22.js"></script>
-	<link rel="stylesheet" href="css/nav.css" />
-	<link rel="stylesheet" href="css/portal.css" />
-</head>
-
-<body>
-	<!-- START WRAPPER -->
-	<main class="wrapper">
-		<header>
-			<h1 id="header"><a href="index.php">Julio Ramos | IT261 Portal</a></h1>
-			<nav>
-				<ul class="topnav" id="myTopnav">
-
-					<li><a href="index.php" >Home</a></li>
-					<li><a href="">Switch (3)</a></li>
-					<li><a href="website/adder.php">Troubleshoot (4)</a></li>
-					<li><a href="website/calculator.php">Calculator (5)</a></li>
-					<li><a href="website/email.php">Email (6)</a></li>
-					<li><a href="website/gallery.php">Gallery (7)</a></li>
-					<li><a href="website/databases.php">Databases (8)</a></li>
-					<li class="icon"> <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a> </li>
-
-				</ul>
-			</nav>
-		</header>
+<?php include 'includes/header.php'; ?>
 
 		<!-- START LEFT COL -->
 		<section>
@@ -118,26 +85,4 @@
 		<!-- END RIGHT COL -->
 
 		<!-- START Footer -->
-		<footer>
-			<p id="footerleft">&copy; 2021 - by Julio Ramos, All Rights Reserved.
-				<br>
-				<a href="https://validator.w3.org/check?uri=julioramos.co/it261" target="_blank">Valid HTML</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=julioramos.co/it261" target="_blank">Valid CSS</a>
-			</p>
-		</footer>
-		<!-- END Footer -->
-	</main>
-	<!-- END WRAPPER -->
-
-	<!-- JavaScript associated with the W3Schools.com Top Navigation Response Exercise -->
-	<script>
-		/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
-	</script>
-</body></html>
+<?php include 'includes/footer.php'; ?>
