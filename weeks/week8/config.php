@@ -5,17 +5,33 @@ define('DEBUG', 'TRUE');  // We want to see our errors
 
 include('credentials.php');
 
+ 
 
+ 
 
-function myError($myFile, $myLine, $errorMsg) 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+function myError($myFile, $myLine, $errorMsg)
 {
-    if(defined('DEBUG') && DEBUG) 
-    {
-        echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
-        echo 'Error message: <b> '.$errorMsg.'</b>';
-        die();
-    } else {
-        echo ' Houston, we have a problem!';
-        die();
-    }  
+if(defined('DEBUG') && DEBUG)
+{
+ echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+    
+    
 }
