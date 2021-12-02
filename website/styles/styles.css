@@ -1,3 +1,5 @@
+/* Styles for main website in IT261 */
+
 * {
     padding: 0;
     margin: 0;
@@ -8,58 +10,81 @@ body {
     background: beige;
 }
 
-form {
-    width: 400px;
-    margin: 30px auto;
+header {
+    overflow: hidden;
+    background: yellow;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.header-inner {
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
-fieldset {
-    padding: 8px;
-    border: 1px solid red;
+#logo {
+    float: left;
+    width: 180px;
+    margin-bottom: 15px;
 }
 
-.box {
-    width: 400px;
-    margin: 10px auto;
-    border: 2px solid green;
-    padding: 8px;
+nav {
+    height: 50px;
+    float: right;
 }
 
-input {
-    margin-bottom: 10px;
+nav ul {
+    float: right;
 }
 
-input[type=radio] {
-    margin-right: 5px;
-}
-
-form ul {
-    margin-left: 10px;
-    margin-bottom: 10px;
+nav li {
+    float: left;
     list-style-type: none;
+    margin-left: 30px;
 }
 
-.error {
-    display: block;
-    color: red;
-    text-align: center;
-    font-size: 1.4em;
+nav a {
+    text-decoration: none;
 }
 
-select {
-    display: block;
-    margin-bottom: 10px;
+#wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
-.results {
-    width: 400px;
-    margin: 30px auto;
-    padding: 8px;
-    border: 1px solid red;
+#hero {
+    height: 300px;
+    background: red;
+    margin-bottom: 20px;
+}
+
+/* Based on 940px grid */
+main {
+    width: 61.7%;
+    height: 400px;
+    background: lightblue;
+    float: left;
+    margin-bottom: 20px;
+}
+
+aside {
+    width: 36.17%;
+    float: right;
+    height: 300px;
+    background: lightcoral;
+}
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px dotted #333;
+    clear: both;
+}
+
+footer ul {
+    float: right;
+}
+
+footer li {
+    float: left;
     list-style-type: none;
+    margin-left: 20px;
 }

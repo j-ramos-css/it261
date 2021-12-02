@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/calc-styles.css" rel="stylesheet">
 </head>
 
 <body>
