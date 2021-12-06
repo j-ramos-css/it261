@@ -71,9 +71,9 @@ td {
 }
 
 #hero {
-    height: 300px;
+    display: inline;
     background: red;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .error {
