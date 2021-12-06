@@ -2,47 +2,38 @@
     <fieldset>
         <label for="first_name">First Name</label>
         <input type="text" name="first_name" value="
-                <?php if(isset($_POST['first_name'])) echo htmlspecialchars($_POST['first_name']); ?>
-            ">
+                <?php if(isset($_POST['first_name'])) echo htmlspecialchars($_POST['first_name']); ?>">
         <span class="error"><?php echo $first_name_Err; ?></span>
 
         <label for="last_name">Last Name</label>
         <input type="text" name="last_name" value="
-                <?php if(isset($_POST['last_name'])) echo htmlspecialchars($_POST['last_name']); ?>
-            ">
+                <?php if(isset($_POST['last_name'])) echo htmlspecialchars($_POST['last_name']); ?>">
         <span class="error"><?php echo $last_name_Err; ?></span>
 
         <label for="email">Email</label>
         <input type="email" name="email" value="
-                <?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>
-            ">
+                <?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>">
         <span class="error"><?php echo $email_Err; ?></span>
 
         <label for="phone">Phone Number</label>
         <input type="text" name="phone" placeholder="xxx-xxx-xxxx" value="
-                <?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>
-            ">
+                <?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>">
         <span class="error"><?php echo $phone_Err; ?></span>
 
         <label for="gender">Gender</label>
         <ul>
 
             <li>
-                <input type="radio" name="gender" value="female" <?php if(isset($_POST['gender']) &&
-                    $_POST['gender']=='female' ) echo 'checked="checked"' ; ?>
-                > Female
+                <input type="radio" name="gender" value="female" <?php if(isset($_POST['gender']) && $_POST['gender']=='female' ) echo 'checked="checked"'; ?>> Female
             </li>
 
             <li>
-                <input type="radio" name="gender" value="male" <?php if(isset($_POST['gender']) && $_POST['gender']=='male'
-                    ) echo 'checked="checked"' ;?>
-                > Male
+                <input type="radio" name="gender" value="male" <?php if(isset($_POST['gender']) && $_POST['gender']=='male') echo 'checked="checked"'; ?>> Male
             </li>
 
             <li>
-                <input type="radio" name="gender" value="other" <?php if(isset($_POST['gender']) &&
-                    $_POST['gender']=='other' ) echo 'checked="checked"' ;?>
-                > Other
+                <input type="radio" name="gender" value="other" 
+                <?php if(isset($_POST['gender']) && $_POST['gender']=='other') echo 'checked="checked"'; ?>> Other
             </li>
 
         </ul>
@@ -51,7 +42,7 @@
             <?php echo $gender_Err; ?>
         </span>
 
-        <label for="wines">Favorite Wines</label>
+        <label for="wines">Choose your newsletter subscription</label>
         <ul>
 
             <li>
@@ -114,7 +105,7 @@
         </span>
 
 
-        <label for="comments">
+        <label for="comments">Comments</label>
             <textarea name="comments">
             <?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']) ;?>
         </textarea>
@@ -125,7 +116,7 @@
 
             <label for="privacy">Privacy</label>
             <ul>
-                <li><input type="radio" name="privacy" value="agree" <? if(isset($_POST['privacy']) &&
+                <li><input type="radio" name="privacy" value="agree" <?php if(isset($_POST['privacy']) &&
                         $_POST['privacy']=='agree' ) echo 'checked="checked" ' ;?>
                     >I agree</li>
             </ul>
