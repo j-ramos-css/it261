@@ -6,9 +6,9 @@
 
     <main>
         <h1><?php echo $headline; ?></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <p>Beer is one of the oldest and most widely consumed 
+            alcoholic drinks in the world, and the third most popular 
+            drink overall after water and tea.
         </p>
 
         <h2>Please fill out our form</h2>
@@ -18,7 +18,8 @@
     </main>
 
     <aside>
-        <h3>Aside for our form</h3>
+        <h3>Welcome to the Beer Flee Market!</h3>
+        <img class="beer-aside" src="images/beer-aside.jpg">
     </aside>
 
     <!-- BEGINNING OF FOOTER -->

@@ -42,41 +42,41 @@
             <?php echo $gender_Err; ?>
         </span>
 
-        <label for="wines">Choose your newsletter subscription</label>
+        <label for="newsletter">Choose your Beer Newsletter subscription</label>
         <ul>
 
             <li>
-                <input type="checkbox" name="wines[]" value="cab"
-                    <?php if(isset($_POST['wines']) && in_array('cab', $wines)) echo 'checked="checked"' ;?>>Cabernet
+                <input type="checkbox" name="newsletter[]" value="ale"
+                    <?php if(isset($_POST['newsletter']) && in_array('ale', $newsletter)) echo 'checked="checked"' ;?>>Ale
             </li>
 
             <li>
-                <input type="checkbox" name="wines[]" value="merlot"
-                    <?php if(isset($_POST['wines']) && in_array('merlot', $wines)) echo 'checked="checked"' ;?>>Merlot
+                <input type="checkbox" name="newsletter[]" value="lager"
+                    <?php if(isset($_POST['newsletter']) && in_array('lager', $newsletter)) echo 'checked="checked"' ;?>>Lager
             </li>
 
             <li>
-                <input type="checkbox" name="wines[]" value="syrah"
-                    <?php if(isset($_POST['wines']) && in_array('syrah', $wines)) echo 'checked="checked"' ;?>>Syrah
+                <input type="checkbox" name="newsletter[]" value="stout"
+                    <?php if(isset($_POST['newsletter']) && in_array('stout', $newsletter)) echo 'checked="checked"' ;?>>Stout
             </li>
 
             <li>
-                <input type="checkbox" name="wines[]" value="melbec"
-                    <?php if(isset($_POST['wines']) && in_array('melbec', $wines)) echo 'checked="checked"' ;?>>Melbec
+                <input type="checkbox" name="newsletter[]" value="porter"
+                    <?php if(isset($_POST['newsletter']) && in_array('porter', $newsletter)) echo 'checked="checked"' ;?>>Porter
             </li>
 
             <li>
-                <input type="checkbox" name="wines[]" value="blend"
-                    <?php if(isset($_POST['wines']) && in_array('blend', $wines)) echo 'checked="checked"' ;?>>Red Blend
+                <input type="checkbox" name="newsletter[]" value="pilsner"
+                    <?php if(isset($_POST['newsletter']) && in_array('pilsner', $newsletter)) echo 'checked="checked"' ;?>>Pilsner
             </li>
 
         </ul>
 
         <span class="error">
-            <?php echo $wines_Err;   ?>
+            <?php echo $newsletter_Err;   ?>
         </span>
 
-        <label for="regions">Regions</label>
+        <label for="regions">Select region for Local recommendations!</label>
         <select name="regions">
             <option value="" NULL
                 <?php if(isset($_POST['regions']) && $_POST['regions'] == NULL) echo 'selected = "unselected"' ;?>>

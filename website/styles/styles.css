@@ -104,6 +104,10 @@ li, input[radio], input[checkbox] {
 
 }
 
+.beer-aside {
+    width: 100%;
+}
+
 textarea {
     width: 70%;
     padding: 20px 0px;

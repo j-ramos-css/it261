@@ -133,7 +133,7 @@ $first_name = '';
 $last_name = '';
 $gender = '';
 $email = '';
-$wines = '';
+$newsletter = '';
 $comments = '';
 $regions = '';
 $privacy = '';
@@ -144,7 +144,7 @@ $first_name_Err = '';
 $last_name_Err = '';
 $gender_Err = '';
 $email_Err = '';
-$wines_Err = '';
+$newsletter_Err = '';
 $comments_Err = '';
 $regions_Err = '';
 $privacy_Err = '';
@@ -177,10 +177,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = $_POST['email'];
     }
 
-    if(empty($_POST['wines'])) {
-        $wines_Err = 'Please choose your wines';
+    if(empty($_POST['newsletter'])) {
+        $newsletter_Err = 'Please choose your newsletters';
     } else {
-        $wines = $_POST['wines'];
+        $newsletter = $_POST['newsletter'];
     }
 
     if($_POST['regions'] == NULL) {
@@ -214,10 +214,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         
 
-    function my_wines() {
+    function my_newsletter() {
         $my_return = '';
-        if(!empty($_POST['wines'])) {
-            $my_return = implode(', ', $_POST['wines'] );
+        if(!empty($_POST['newsletter'])) {
+            $my_return = implode(', ', $_POST['newsletter'] );
         }
         return $my_return;
     }
@@ -227,7 +227,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $_POST['last_name'],
     $_POST['email'],
     $_POST['gender'],
-    $_POST['wines'],
+    $_POST['newsletter'],
     $_POST['regions'],
     $_POST['comments'],
     $_POST['privacy'],
@@ -243,7 +243,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         Gender: '.$gender.' '.PHP_EOL.'
         Email: '.$email.' '.PHP_EOL.'
         Phone: '.$phone.' '.PHP_EOL.'
-        Wines: '.my_wines().' '.PHP_EOL.'
+        Newsletters: '.my_newsletter().' '.PHP_EOL.'
         Region: '.$regions.' '.PHP_EOL.'
         Comments: '.$comments.' '.PHP_EOL.'
         ';
