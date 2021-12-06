@@ -28,21 +28,21 @@
         <ul>
 
             <li>
-                <input type="radio" name="gender" value="female" <? if(isset($_POST['gender']) &&
+                <input type="radio" name="gender" value="female" <?php if(isset($_POST['gender']) &&
                     $_POST['gender']=='female' ) echo 'checked="checked"' ; ?>
-                >Female
+                > Female
             </li>
 
             <li>
-                <input type="radio" name="gender" value="male" <? if(isset($_POST['gender']) && $_POST['gender']=='male'
+                <input type="radio" name="gender" value="male" <?php if(isset($_POST['gender']) && $_POST['gender']=='male'
                     ) echo 'checked="checked"' ;?>
-                >Male
+                > Male
             </li>
 
             <li>
-                <input type="radio" name="gender" value="other" <? if(isset($_POST['gender']) &&
+                <input type="radio" name="gender" value="other" <?php if(isset($_POST['gender']) &&
                     $_POST['gender']=='other' ) echo 'checked="checked"' ;?>
-                >Other
+                > Other
             </li>
 
         </ul>
