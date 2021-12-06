@@ -160,7 +160,7 @@ $cats['Scottish_Fold'] = 'sfold_A breed with a natural mutation that affects car
                     <?php
                     foreach($nav as $key => $value) {
                         if(THIS_PAGE == $key) {
-                            echo '<li><a class="current href="'.$key.'">'.$value.'</a></li>';
+                            echo '<li><a class="current" href="'.$key.'">'.$value.'</a></li>';
                         } else {
                             echo '<li><a href="'.$key.'">'.$value.'</a></li>';
                         }

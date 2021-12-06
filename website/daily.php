@@ -5,7 +5,7 @@
 <div id="wrapper">
     <main>
         <h1><?php echo $headline; ?></h1>
-        <h2><?php echo $daily; ?></h2>
+        <?php echo $daily; ?>
         <img src="images/switch/<?php echo $pic; ?>" class="img-daily" alt="<?php echo $alt; ?>">
         <p><?php echo $content; ?></p>
     </main>
