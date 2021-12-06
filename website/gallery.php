@@ -1,4 +1,5 @@
-<?php include(includes/header.php); ?>
+<?php include('includes/header.php'); ?>
+
 <!-- END OF HEADER -->
 
 	<table>
@@ -14,4 +15,5 @@
 
 
 <!-- BEGINNING OF FOOTER -->
-<?php include(includes/footer.php); ?>
+
+<?php include('includes/footer.php'); ?>
