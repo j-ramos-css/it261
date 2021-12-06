@@ -1,23 +1,19 @@
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
     <fieldset>
         <label for="first_name">First Name</label>
-        <input type="text" name="first_name" value="
-                <?php if(isset($_POST['first_name'])) echo htmlspecialchars($_POST['first_name']); ?>">
+        <input type="text" name="first_name" value="<?php if(isset($_POST['first_name'])) echo htmlspecialchars($_POST['first_name']); ?>">
         <span class="error"><?php echo $first_name_Err; ?></span>
 
         <label for="last_name">Last Name</label>
-        <input type="text" name="last_name" value="
-                <?php if(isset($_POST['last_name'])) echo htmlspecialchars($_POST['last_name']); ?>">
+        <input type="text" name="last_name" value="<?php if(isset($_POST['last_name'])) echo htmlspecialchars($_POST['last_name']); ?>">
         <span class="error"><?php echo $last_name_Err; ?></span>
 
         <label for="email">Email</label>
-        <input type="email" name="email" value="
-                <?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>">
+        <input type="email" name="email" value="<?php if(isset($_POST['email'])) echo htmlspecialchars($_POST['email']); ?>">
         <span class="error"><?php echo $email_Err; ?></span>
 
         <label for="phone">Phone Number</label>
-        <input type="text" name="phone" placeholder="xxx-xxx-xxxx" value="
-                <?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>">
+        <input type="text" name="phone" placeholder="xxx-xxx-xxxx" value="<?php if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone']); ?>">
         <span class="error"><?php echo $phone_Err; ?></span>
 
         <label for="gender">Gender</label>
@@ -108,7 +104,7 @@
         <label for="comments">Comments</label>
             <textarea name="comments">
             <?php if(isset($_POST['comments'])) echo htmlspecialchars($_POST['comments']) ;?>
-        </textarea>
+            </textarea>
 
             <span class="error">
                 <?php echo $comments_Err;   ?>

@@ -76,6 +76,15 @@ td {
     margin-bottom: 20px;
 }
 
+.error {
+    display: block;
+
+    color: rgb(226, 101, 101);
+    text-decoration-style: italic;
+    font-size: 18px;
+    margin: 10px;
+}
+
 fieldset {
     width: 80%;
     border: none;
@@ -97,11 +106,20 @@ input[type=text], input[type=email], select {
     box-sizing: border-box;
 }
 
-li, input[radio], input[checkbox] {
+li, input[type=radio], input[type=checkbox] {
     padding: 5px 0px;
     margin-left: 10px;
 
 
+}
+
+input[type=submit] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .beer-aside {
@@ -126,14 +144,15 @@ label, li {
 
   h1, h2, h3 {
       padding: 20px 0;
-  }
+}
 
-
+placeholder {
+    color: lightgray;
+}
 /* Based on 940px grid */
 
 main {
     width: 61.7%;
-    height: 550px;
     float: left;
     margin-bottom: 20px;
 }
@@ -141,7 +160,6 @@ main {
 aside {
     width: 36.17%;
     float: right;
-    height: 700px;
 }
 
 aside li {
