@@ -7,7 +7,16 @@
 
 
     <div id="hero">
-
+    <?php echo random_pics($photos); ?>
+    <p class="rand-function">
+        <pre>
+            <br>function random_pics($photos) {
+                $i = rand(0, 4);
+                $selected_image = ''.$photos[$i].'.jpg';
+                return '< img src="images/'.$selected_image.'" alt="'.$photos[$i].'">';
+            }
+        </pre>
+    </p>
     </div>
     <!--end hero-->
 

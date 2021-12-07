@@ -8,6 +8,7 @@
 
 body {
     background: beige;
+    font-family: Arial, sans-serif;
 }
 
 header {
@@ -71,9 +72,13 @@ td {
 }
 
 #hero {
-    display: inline;
-    background: red;
     margin-bottom: 50px;
+}
+
+.rand_function{
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+
 }
 
 .error {
