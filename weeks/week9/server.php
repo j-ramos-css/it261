@@ -8,12 +8,12 @@ $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(myError(_
 // register users
 
 if(isset($_POST['reg_user'])) {
-    $first_name = mysql_real_escape_string($iConn, $_POST['first_name']);
-    $last_name = mysql_real_escape_string($iConn, $_POST['last_name']);
-    $email = mysql_real_escape_string($iConn, $_POST['email']);
-    $username = mysql_real_escape_string($iConn, $_POST['username']);
-    $password_1 = mysql_real_escape_string($iConn, $_POST['password_1']);
-    $password_2 = mysql_real_escape_string($iConn, $_POST['password_2']);
+    $first_name = mysqli_real_escape_string($iConn, $_POST['first_name']);
+    $last_name = mysqli_real_escape_string($iConn, $_POST['last_name']);
+    $email = mysqli_real_escape_string($iConn, $_POST['email']);
+    $username = mysqli_real_escape_string($iConn, $_POST['username']);
+    $password_1 = mysqli_real_escape_string($iConn, $_POST['password_1']);
+    $password_2 = mysqli_real_escape_string($iConn, $_POST['password_2']);
 
     // errors if not filled out by user
 
@@ -59,7 +59,7 @@ if(isset($_POST['reg_user'])) {
         }
     } // end if rows
 
-    if(count($errors) < 1) {
+    if(count($errors) == 0) {
 
         // new function= md5() - this will spit out in database a 32 hex character value for password
         $password = md5($password_1);
@@ -81,8 +81,8 @@ if(isset($_POST['reg_user'])) {
 
 // now we communicate with login.php
 if(isset($_POST['login_user'])) {
-    $username = mysql_real_escape_string($iConn, $_POST['username']);
-    $password = mysql_real_escape_string($iConn, $_POST['password']);
+    $username = mysqli_real_escape_string($iConn, $_POST['username']);
+    $password = mysqli_real_escape_string($iConn, $_POST['password']);
 
     if(empty($username)) {
         array_push($errors, 'Username is required!');

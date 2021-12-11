@@ -16,7 +16,7 @@ if(isset($_GET['logout'])) {
     header('Location:login.php');
 }
 
-include('include/header.php');
+include('includes/header.php');
 // HEADER START
 
 if(isset($_SESSION['success'])) :?>
