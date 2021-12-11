@@ -31,7 +31,7 @@ if(isset($_SESSION['success'])) :?>
 <?php endif ;
 
 if(isset($_SESSION['username'])) : ?>
-<header>
+
 <div class="welcome-logout">
     <h3>Hello <?php echo $_SESSION['username']; ?></h3>
     <a href="index.php?logout='1'">Log out</a>
