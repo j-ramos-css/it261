@@ -98,15 +98,16 @@ if(isset($_POST['login_user'])) {
         $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 
         $results = mysqli_query($iConn, $query);
-    }
+    
         
-    if(mysqli_num_rows($results) == 1 ) {
+        if(mysqli_num_rows($results) == 1 ) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = $success;
             header('Location:index.php');
-    } else {
+        } else {
             array_push($errors, 'Wrong undername/password combo');
     }
+}
     
 
 } // end isset login
