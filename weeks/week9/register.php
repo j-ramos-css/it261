@@ -1,6 +1,6 @@
 <?php //register.php
 include('server.php');
-include('includes/header.php');
+include('includes/header-form.php');
 ?>
 
 <div id="wrapper">
@@ -35,5 +35,10 @@ include('includes/header.php');
     </fieldset>
 </form>
 
-</div> <!-- CLOSE WRAPPER-->
-<?php include('includes/footer.php'); ?>
+<h3>Already a member?</h3>
+<span class="block"><a href="login.php">Log in here!</a></span>
+
+</div> <!-- CLOSE WRAPPER -->
+
+</body>
+</html>
