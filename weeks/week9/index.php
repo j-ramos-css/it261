@@ -2,7 +2,6 @@
 
 session_start();
 include('config.php');
-include('includes/header.php');
 
 // user must log in correctly, else be directed to register
 
