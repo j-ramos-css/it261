@@ -45,4 +45,4 @@ if(isset($_SESSION['username'])) : ?>
 
 </div> <!-- END WRAPPER -->
 <!-- FOOTER -->
-<?php include('include/footer.php'); ?>
+<?php include('includes/footer.php'); ?>
