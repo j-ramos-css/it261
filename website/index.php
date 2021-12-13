@@ -2,10 +2,6 @@
 
 <!-- END OF HEAD -->
 
-<div id="wrapper">
-
-
-
     <div id="hero">
     <?php echo random_pics($photos); ?>
     <p class="rand-function">

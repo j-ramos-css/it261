@@ -60,6 +60,39 @@ nav a {
     max-width: 300px;
 }
 
+/* PROJECT PAGE STYLES */
+
+.blurb {
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 20px;
+}
+
+.pview-disc {
+    margin: 20px;
+}
+
+hr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.view-img-aside {
+    width: 100%;
+}
+
+/* ABOUT PAGE STYLES */
+
+.about-img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
 table {
     border: 5px solid maroon;
     color: maroon;

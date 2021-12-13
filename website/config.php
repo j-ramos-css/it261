@@ -1,5 +1,10 @@
 <?php
 
+ob_start();  // prevents header errors before reading the whole page!
+define('DEBUG', 'TRUE');  // We want to see our errors
+
+include('credentials.php');
+
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 $nav['index.php'] = 'Home';
@@ -275,11 +280,6 @@ function random_pics($photos) {
 }
 
 // PROJECT
-
-ob_start();  // prevents header errors before reading the whole page!
-define('DEBUG', 'TRUE');  // We want to see our errors
-
-include('credentials.php');
 
 function myError($myFile, $myLine, $errorMsg)
 {

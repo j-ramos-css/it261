@@ -1,8 +1,6 @@
 <?php include('includes/header.php'); ?>
 
 <!-- END OF HEAD -->
-
-<div id="wrapper">
     <main>
         <h1><?php echo $headline; ?></h1>
         <?php echo $daily; ?>

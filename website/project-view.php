@@ -1,6 +1,6 @@
 <?php //project-view.php
 
-include('config.php');
+include("includes/header.php");
 
 // if isset $_GET['today'] <etc class="">
 
@@ -10,7 +10,7 @@ if(isset($_GET[id])) {
     header('Location: project.php');
 }
 
-$sql = 'SELECT * FROM people WHERE people_id = '.$id.'';
+$sql = 'SELECT * FROM project WHERE parties_id = '.$id.'';
 
 $iConn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die(myError(__FILE__,__LINE__,mysqli_connect_error()));
  
@@ -21,11 +21,11 @@ $result = mysqli_query($iConn, $sql) or die(myError(__FILE__,__LINE__,mysqli_err
 if(mysqli_num_rows($result) > 0 ) {
     // now time for the while loop - while loop will return array
     while($row = mysqli_fetch_assoc($result)) { // we are not echoing, we are assigning our row first_name to variable first_name
-        $first_name = stripslashes($row['first_name']);
-        $last_name = stripslashes($row['last_name']);
-        $email = stripslashes($row['email']);
-        $birthdate = stripslashes($row['birthdate']);
-        $occupation = stripslashes($row['occupation']);
+        $name = stripslashes($row['name']);
+        $orientation = stripslashes($row['orientation']);
+        $position = stripslashes($row['position']);
+        $age = stripslashes($row['age']);
+        $us_affiliation = stripslashes($row['us_affiliation']);
         $description = stripslashes($row['description']);
         $blurb = stripslashes($row['blurb']);
         $feedback = '';
@@ -36,24 +36,22 @@ if(mysqli_num_rows($result) > 0 ) {
 
 // for the BIG assignment, I will call out the header include (include/header.php)
 
-include("includes/header.php");
-
 ?>
 <main>
-<h1>Welcome to <?php echo $first_name;?>'s page!</h1>
+<h1>Welcome to the <?php echo $name;?>'s page!</h1>
 
 <?php
 
 if($feedback == '') {
     echo '<ul>';
-    echo '<li><b>First Name:</b> '.$first_name.'</li>';
-    echo '<li><b>Last Name:</b> '.$last_name.'</li>';
-    echo '<li><b>Email:</b> '.$email.'</li>';
-    echo '<li><b>Birthdate:</b> '.$birthdate.'</li>';
-    echo '<li><b>Occupation:</b> '.$occupation.'</li>';
+    echo '<li><b>Name:</b> '.$name.'</li>';
+    echo '<li><b>Political Orientation:</b> '.$orientation.'</li>';
+    echo '<li><b>Position on Puerto Rican status:</b> '.$position.'</li>';
+    echo '<li><b>US Political Affiliation:</b> '.$us_affiliation.'</li>';
+    echo '<li><b>Founding:</b> '.$age.'</li>';
     echo '</ul>';
-    echo '<p>'.$description.'</p>';
-    echo 'Return back to the <a href="project.php">project page!</a>';
+    echo '<p class="pview-disc">'.$description.'</p>';
+    echo '<a href="project.php">Back</a>';
 }
 
 ?>
@@ -63,15 +61,14 @@ if($feedback == '') {
 <?php
 
 if($feedback == '') {
-    echo '<img src="images/people'.$id.'.jpg" alt="'.$first_name.'">';
+    echo '<img src="images/parties'.$id.'.jpg" alt="'.$name.'" class="view-img-aside">';
+    echo '<h2>'.$name.'</h2>';
     echo '<p class="blurb">'.$blurb.'</p>';
 }
-
 ?>
-<h2>My mystery aside</h2>
+
 </aside>
 
-</div> <!--end wrapper-->
 
 <?php mysqli_free_result($result);
 mysqli_close($iConn); ?>

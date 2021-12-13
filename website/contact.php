@@ -2,8 +2,6 @@
 
 <!-- END OF HEAD -->
 
-<div id="wrapper">
-
     <main>
         <h1><?php echo $headline; ?></h1>
         <p>Beer is one of the oldest and most widely consumed 

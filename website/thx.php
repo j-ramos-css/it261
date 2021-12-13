@@ -2,8 +2,6 @@
 
 <!-- END OF HEAD -->
 
-<div id="wrapper">
-
     <div id="hero">
         <img src="images/beer-header.jpg">
     </div>
