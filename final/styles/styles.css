@@ -1,0 +1,300 @@
+/* Styles for final website - IT261 */
+
+/* UNIVERSAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* BODY & WRAPPER */
+
+body {
+    background: rgb(255, 245, 248);
+    font-family: Arial, sans-serif;
+}
+
+#wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+    margin-bottom: -50px;
+}
+
+/* HEADER */
+
+header {
+    overflow: hidden;
+    background: darkblue;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+nav {
+    height: 50px;
+    float: right;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(186, 186, 186);
+}
+
+.current {
+    color: rgb(247, 118, 79);
+    font-weight: bold;
+}
+
+
+/* USER */
+
+.success {
+    float: left;
+    padding: 5px;
+    margin-bottom: 10px;
+    border:1px solid brown ;
+}
+
+.welcome-logout {
+    color: white;
+    float: right;
+    margin-left: 20px;
+    margin-right: -100px;
+    margin-top: -10px;
+    border:1px solid brown;    
+    border-radius: 3px;
+}
+
+.welcome-logout > h4 {
+    font-size: 14px;
+    margin: 5px;
+}
+
+.welcome-logout > a {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* INDEX */
+
+.img-daily {
+    max-width: 300px;
+}
+
+#hero {
+    width: 100%;  
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#hero img {
+    object-fit: cover;
+}
+
+.index-main {
+    margin-bottom: 100px;
+}
+
+.index-main p {
+    font-size: large;
+}
+
+.index-aside p {
+    font-style: italic;
+}
+
+/* LIST PAGE STYLES */
+
+.blurb {
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 20px;
+}
+
+.pview-disc {
+    margin: 20px;
+}
+
+hr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.view-img-aside {
+    width: 100%;
+}
+
+/* ABOUT PAGE STYLES */
+
+.about-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.about-aside-img {
+    margin-top: 80px;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+/* GALLERY */
+
+table {
+    border: 5px solid maroon;
+    color: maroon;
+    margin: 50px auto;
+    padding: 8px;
+}
+
+td {
+    border: 2px solid maroon;
+}
+
+.error {
+    display: block;
+
+    color: rgb(226, 101, 101);
+    text-decoration-style: italic;
+    font-size: 18px;
+    margin: 10px;
+}
+
+fieldset {
+    width: 80%;
+    border: none;
+}
+
+label {
+    margin: 0;
+    display: block;
+    font-weight: bold;
+}
+
+input[type=text], input[type=email], select {
+    width: 70%;
+    padding: 5px 0px;
+    margin: 10px 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+li, input[type=radio], input[type=checkbox] {
+    padding: 5px 0px;
+    margin-left: 10px;
+
+
+}
+
+input[type=submit] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.beer-aside {
+    width: 100%;
+}
+
+textarea {
+    width: 70%;
+    padding: 20px 0px;
+    margin: 10px 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+label, li {
+      list-style-type: none;
+      margin-left: 20px;
+}
+
+  h1, h2, h3 {
+      padding: 20px 0;
+}
+
+placeholder {
+    color: lightgray;
+}
+
+main {
+    width: 61.7%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+/* ASIDE */
+
+aside {
+    width: 36.17%;
+    float: right;
+}
+
+aside li {
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+aside li a {
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px dotted #333;
+    clear: both;
+    height: 50px;
+}
+
+.push {
+    height: 50px;
+}
+
+footer ul {
+    float: right;
+}
+
+footer li {
+    float: left;
+    list-style-type: none;
+    margin-left: 20px;
+}
